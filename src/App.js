@@ -25,9 +25,9 @@ function mapStateToProps(state) {
   }
 }
 
-const mapDispatchToProps = {
-  add1: () => {
-    return { type: 'add', payload: 1 }
+function mapDispatchToProps(dispatch) {
+  return {
+    add1: () => dispatch({ type: 'add', payload: 1 })
   }
 }
 
