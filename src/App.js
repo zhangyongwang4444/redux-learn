@@ -19,13 +19,13 @@ class App extends Component {
   }
 }
 
-function getPartialStore(state) {
+function mapStateToProps(state) {
   return {
     n: state.n
   }
 }
 
-const actionCreator = {
+const mapDispatchToProps = {
   add1: () => {
     return { type: 'add', payload: 1 }
   }
@@ -33,4 +33,4 @@ const actionCreator = {
 
 
 
-export default connect(getPartialStore, actionCreator)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
